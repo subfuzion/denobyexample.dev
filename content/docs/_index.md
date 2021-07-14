@@ -5,6 +5,7 @@ weight: 20
 menu:
   main:
     weight: 20
+hide_feedback: true
 ---
 
 [comment]: <> ({{% pageinfo %}})

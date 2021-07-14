@@ -12,3 +12,5 @@ the following:
 * [Docker](https://docs.docker.com/get-docker/)
 
 * curl (for [Windows](https://curl.se/windows/); probably already pre-installed on [Linux](https://curl.se/download.html) and [macOS](https://formulae.brew.sh/formula/curl))
+
+{{% pageinfo %}} This is a placeholder page that shows you how to use this template site. {{% /pageinfo %}}
