@@ -1,5 +1,5 @@
 baseURL = "/"
-title = "Dockerfiles for Developers"
+title = "Deno by Example"
 
 enableRobotsTXT = true
 
