@@ -7,7 +7,9 @@ Variables are explicitly declared and used by the compiler to check that they
 are used as expected for their type. You don't have to declare the type if the
 compiler can infer it from its use.
 
-```js
+<!-- markdownlint-disable -->
+{{< tabpane >}}
+  {{< tab header=variables.ts lang="text" lang="js" >}}
 let a = "hello";
 console.log(a, typeof a);
 
@@ -26,31 +28,32 @@ console.log(d, typeof d);
 let e: number;
 // error: can't use e before it's assigned a value
 // console.log(e, typeof(e));
-// Now we can use e
 e = 4;
 console.log(e, typeof e);
-```
-
-Run it:
-
-```sh
-$ deno run variables.ts 
+  {{< /tab >}}
+  {{< tab header="Output" lang="text" lang="shell" >}}
 hello string
 1 number
 1 number
 true boolean
 4 number
-```
+  {{< /tab >}}
+{{< /tabpane >}}
+<!-- markdownlint-restore -->
 
-{{% alert title="Note" %}} **Always** use `let` to declare a variable **unless**
-you know the value is constant, which we'll discuss in the next section. {{%
-/alert %}}
+<!-- markdownlint-disable --> 
+{{% alert title="Note" %}}
+**Always** use `let` to declare a variable **unless** you know the value is
+constant, which we'll discuss in the next section.
+{{% /alert %}}
 
-{{< alert color="warning" title="Warning: let vs. var" >}} Although TypeScript
-allows using `var` to declare variables, **don't use it** -- always use `let` or
-`const` instead.
+{{< alert color="warning" title="Warning: let vs. var" >}}
+Although TypeScript allows using `var` to declare variables, **don't use it** --
+always use `let` or `const` instead.
 
 `var` is available to support legacy behavior from older JavaScript, but it's
-use is problematic in modern TypeScript. Read the
+use is problematic in modern TypeScript. See the
 [Handbook](https://www.typescriptlang.org/docs/handbook/variable-declarations.html)
-to dig deeper. {{< /alert >}}
+to dig deeper.
+{{< /alert >}}
+<!-- markdownlint-restore -->

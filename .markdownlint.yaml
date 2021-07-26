@@ -1,0 +1,27 @@
+# These markdown rules are enforced by CI builds
+# - .github/workflows/markdown_linter.yml
+#
+# You can run a markdown lint check before submitting a pull request:
+#   npm install -g markdownlint-cli2
+#   markdownlint-cli2 README.md
+#   # or to lint and fix:
+#   markdownlint-cli2-fix README.md
+# 
+# Rules for markdownlint-cli2 (https://github.com/DavidAnson/markdownlint-cli2)
+# Based on markdownlint library (https://github.com/DavidAnson/markdownlint)
+# (same linter as vscode-markdownlint).
+# See rules descriptions here:
+# https://github.com/DavidAnson/markdownlint/blob/main/doc/Rules.md
+#
+frontMatter: (^---\s*$[^]*?^---\s*$)(\r\n|\r|\n|$)
+line_length:                 # MD013 max line length
+  line_length: 80            # next ine (stern) allows long URLs
+  stern: true                # allows for lines with no spaces (long URLs), otherwise error
+  tables: false              # don't break tables
+  code_blocks: false         # don't break on code blocks
+html:                        # MD033 no html
+  allowed_elements: [br, hr]
+no-bare-urls: false          # MD034 - false because bare-urls are printed in example output
+headings: false              # MD041 - false because H1 provided by title in frontmatter
+images: false                # MD045: image alt text
+no-space-in-emphasis: false  # MD037 - false because space in multiplication expressions
