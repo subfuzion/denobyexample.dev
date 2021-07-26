@@ -1,6 +1,5 @@
 ---
 title: "Hello World"
-linkTitle: "Hello World"
 weight: 10
 ---
 
