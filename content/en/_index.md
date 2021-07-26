@@ -23,3 +23,13 @@ formatter (deno fmt).
 
 - Has a set of reviewed (audited) standard modules that are guaranteed to work
 with Deno: [deno.land/std](https://deno.land/std)
+
+{{% pageinfo %}}
+This version of **Deno by Example** only shows examples for TypeScript.
+
+Deno innovates in a number of ways, and one of these is by providing
+first class "batteries-included" support for TypeScript. As you ramp
+up, you will benefit from early exposure to strong typing; it is better 
+to catch mistakes early when Deno compiles code instead of later after
+the program is running.
+{{% /pageinfo %}}
