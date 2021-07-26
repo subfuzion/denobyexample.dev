@@ -1,6 +1,6 @@
 ---
-title: For..of
-weight: 60
+title: For..of loop
+weight: 70
 ---
 
 The for..of loop is for looping over objects that implement the `Iterable`
