@@ -1,6 +1,5 @@
 ---
 title: "Values"
-linkTitle: "Values"
 weight: 20
 ---
 
@@ -66,7 +65,7 @@ to an integer rounded up, down, or to the nearest, respectively.
 Try using Deno's REPL (read-eval-print-loop) for experimenting.
 Enter `deno repl` (or just simply `deno`) in your terminal.
 
-```sh
+```js
 $ deno
 Deno 1.12.1
 exit using ctrl+d or close()
