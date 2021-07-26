@@ -1,0 +1,26 @@
+{
+  "name": "denobyexample.dev",
+  "version": "0.0.1",
+  "description": "",
+  "main": "none.js",
+  "scripts": {
+    "build": "build.sh",
+    "deploy": "deploy.sh",
+    "server": "hugo server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/subfuzion/denobyexample.dev.git"
+  },
+  "author": "",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/subfuzion/denobyexample.dev/issues"
+  },
+  "homepage": "https://denobyexample.dev",
+  "devDependencies": {
+    "autoprefixer": "^10.3.1",
+    "postcss": "^8.0.0",
+    "postcss-cli": "^8.3.1"
+  }
+}
