@@ -39,9 +39,9 @@ true || false = true
 !true = false
 ```
 
-TypeScript does not have separate types for `integer` and `float`
-values, only `number`. Be aware that the computations that result
-in a floating point value might not be what you're expecting.
+TypeScript does not have separate types for `integer` and `float` values, only
+`number`. Be aware that the computations that result in a floating point value
+might not be what you're expecting.
 
 ```js
 console.log("7 / 3 =", 7 / 3);
@@ -59,11 +59,11 @@ Gives the following results:
 2.3333333333333335 * 3 = 7
 ```
 
-You can use `Math.ceil`, `Math.floor`, and `Math.round` to convert
-to an integer rounded up, down, or to the nearest, respectively.
+You can use `Math.ceil`, `Math.floor`, and `Math.round` to convert to an integer
+rounded up, down, or to the nearest, respectively.
 
-Try using Deno's REPL (read-eval-print-loop) for experimenting.
-Enter `deno repl` (or just simply `deno`) in your terminal.
+Try using Deno's REPL (read-eval-print-loop) for experimenting. Enter
+`deno repl` (or just simply `deno`) in your terminal.
 
 ```js
 $ deno
@@ -80,8 +80,8 @@ exit using ctrl+d or close()
 ```
 
 If you want to obtain a string value of the result of a calculation to a
-particular precision,
-you can use `toPrecision()` to specify the number of significant digits.
+particular precision, you can use `toPrecision()` to specify the number of
+significant digits.
 
 ```js
 > (7/3).toPrecision(3)
