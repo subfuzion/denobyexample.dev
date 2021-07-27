@@ -26,7 +26,6 @@ console.log(d, typeof d);
 let e: number;
 // error: can't use e before it's assigned a value
 // console.log(e, typeof(e));
-// Now we can use e
 e = 4;
 console.log(e, typeof e);
 ```

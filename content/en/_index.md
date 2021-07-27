@@ -8,6 +8,9 @@ cascade:
 - type: "docs"
   _target:
     path: "/**"
+description: >
+  A hands-on orientation to [Deno](https://deno.land) inspired by
+  [Go by Example](https://gobyexample.com/).
 ---
 
 Deno is a simple, modern and secure runtime for JavaScript and TypeScript.
