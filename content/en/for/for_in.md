@@ -3,9 +3,9 @@ title: For..in loop
 weight: 80
 ---
 
-The for..in loop is used to iterate over an object's properties. It's usage with
-JavaScript has complex behavior that can be surprising, but as long as you stick
-to TypeScript, you do not need to be aware of JavaScript's object-based
+The for..in loop is used to iterate over an object's properties. Its classic
+usage with JavaScript has complex behavior that can be surprising, but as long
+as you use TypeScript, you avoid the nuances of JavaScript's object-based
 inheritance and object prototype chaining.
 
 Here we demonstrate the for..in loop, followed by the equivalent example using
@@ -52,8 +52,8 @@ There are two things to note about the output:
   using `keyof` for the type.
 
 There's an easier way to do this. Simply use the for..of loop discussed in the
-previous section. The instance itself (`b`) is not directly iterable, but you
-can get an iterator using `Object.entries(b)`, as shown here:
+previous section. The object itself (`b`) is not directly iterable, but you can
+get an iterator using `Object.entries(b)`, as shown here:
 
 ```js
 for (const [key, value] of Object.entries(b)) {
