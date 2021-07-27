@@ -1,43 +1,7 @@
 ---
-title: "Values"
-weight: 20
+title: A bit more about numbers
+weight: 21
 ---
-
-Deno supports both JavaScript and TypeScript, which share the same primitive
-types: `string`, `number`, and `boolean`.
-
-```js
-console.log("deno" + ".land");
-
-console.log("1 + 1 =", 1 + 1);
-console.log("2 - 1 =", 2 - 1);
-console.log("2 * 2 =", 2 * 2);
-console.log("6 / 3 =", 6 / 3);
-
-console.log("true =", true);
-console.log("false =", false);
-console.log("true && false =", true && false);
-console.log("true || false =", true || false);
-console.log("!true =", !true);
-```
-
-To see the results, save the code to `values.ts` and run it.
-
-```shell
-$ deno run values.ts
-deno.land
-
-1 + 1 = 2
-2 - 1 = 1
-2 * 2 = 4
-6 / 3 = 2
-
-true = true
-false = false
-true && false = false
-true || false = true
-!true = false
-```
 
 TypeScript does not have separate types for `integer` and `float` values, only
 `number`. Be aware that the computations that result in a floating point value
@@ -50,9 +14,7 @@ console.log("2.33 * 3 =", 2.33 * 3);
 console.log("2.3333333333333335 * 3 =", 2.3333333333333335 * 3);
 ```
 
-Gives the following results:
-
-```shell
+```text
 7 / 3 = 2.3333333333333335
 7.0 / 3.0 = 2.3333333333333335
 2.33 * 3 = 6.99
