@@ -12,6 +12,8 @@ Here we demonstrate the for..in loop, followed by the equivalent example using
 the for..of loop discussed in the previous section. Our recommendation is that
 you focus on using the for..of loop to keep things simple.
 
+## Iterating object properties with for..in
+
 This example will use code that has not been discussed yet. The main point of
 this example right now is just to highlight the for..in and for..of loops with
 objects.
@@ -50,6 +52,8 @@ There are two things to note about the output:
   enumeration to an
   [indexed access type](https://www.typescriptlang.org/docs/handbook/2/indexed-access-types.html)
   using `keyof` for the type.
+
+## Iterating object properties with for..of
 
 There's an easier way to do this. Simply use the for..of loop discussed in the
 previous section. The object itself (`b`) is not directly iterable, but you can
