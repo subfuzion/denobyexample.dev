@@ -34,8 +34,6 @@ for (const prop in b) {
 }
 ```
 
-Output:
-
 ```text
 $ deno run for_in.ts 
 foo = base-value
@@ -64,8 +62,6 @@ for (const [key, value] of Object.entries(b)) {
   console.log(key, "=", value);
 }
 ```
-
-Output:
 
 ```text
 foo = base-value

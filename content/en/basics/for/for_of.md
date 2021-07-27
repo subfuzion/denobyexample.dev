@@ -19,8 +19,6 @@ for (const num of nums) {
 console.log(`sum: ${sum}`);
 ```
 
-Output:
-
 ```text
 $ deno run for_of.ts 
 sum: 9
@@ -38,8 +36,6 @@ for (const s of str) {
   console.log(s);
 }
 ```
-
-Output:
 
 ```text
 h string
@@ -63,8 +59,6 @@ for (const entry of map) {
 }
 ```
 
-Output:
-
 ```text
 [ "a", 1 ]
 [ "b", 2 ]
@@ -78,8 +72,6 @@ for (const [k, v] of map) {
   console.log(`key: ${k} => value: ${v}`);
 }
 ```
-
-Output:
 
 ```text
 key: a => value: 1
@@ -112,8 +104,6 @@ for (const [_, value] of map) {
 }
 ```
 
-Output:
-
 ```text
 value: 1
 value: 2
@@ -128,8 +118,6 @@ for (const val of set) {
   console.log(val);
 }
 ```
-
-Output:
 
 ```text
 2

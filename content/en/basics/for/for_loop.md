@@ -13,8 +13,6 @@ for (let j = 4; j < 10; j++) {
 }
 ```
 
-Output:
-
 ```text
 4
 5
@@ -36,8 +34,6 @@ for (; i <= 3;) {
 }
 ```
 
-Output:
-
 ```text
 $ deno run for.ts 
 1
@@ -58,8 +54,6 @@ for (;;) {
 }
 ```
 
-Output:
-
 ```text
 loop
 ```
@@ -75,8 +69,6 @@ for (let n = 0; n <= 5; n++) {
   console.log(n);
 }
 ```
-
-Output:
 
 ```text
 1

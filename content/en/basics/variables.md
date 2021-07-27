@@ -30,8 +30,6 @@ e = 4;
 console.log(e, typeof e);
 ```
 
-Run it:
-
 ```sh
 $ deno run variables.ts 
 hello string
