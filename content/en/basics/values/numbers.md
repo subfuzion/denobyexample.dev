@@ -49,5 +49,5 @@ significant digits.
 > (7/3).toPrecision(3)
 "2.33"
 > (2).toPrecision(4)
-"2.0"
+"2.000"
 ```
