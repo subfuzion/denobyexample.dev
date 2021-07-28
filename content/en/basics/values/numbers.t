@@ -8,22 +8,7 @@ TypeScript does not have separate types for `integer` and `float` values, only
 `number`. Be aware that the computations that result in a floating point value
 might not be what you're expecting.
 
-<!-- markdownlint-disable -->
-{{< tabpane >}}
-  {{< tab header=numbers.ts lang="text" lang="js" >}}
-console.log("7 / 3 =", 7 / 3);
-console.log("7.0 / 3.0 =", 7.0 / 3.0);
-console.log("2.33 * 3 =", 2.33 * 3);
-console.log("2.3333333333333335 * 3 =", 2.3333333333333335 * 3);
-  {{< /tab >}}
-  {{< tab header="Output" lang="text" lang="shell" >}}
-7 / 3 = 2.3333333333333335
-7.0 / 3.0 = 2.3333333333333335
-2.33 * 3 = 6.99
-2.3333333333333335 * 3 = 7
-  {{< /tab >}}
-{{< /tabpane >}}
-<!-- markdownlint-restore -->
+@numbers.ts
 
 You can use `Math.ceil`, `Math.floor`, and `Math.round` to convert to an integer
 rounded up, down, or to the nearest, respectively.

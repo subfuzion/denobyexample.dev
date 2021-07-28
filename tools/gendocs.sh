@@ -119,11 +119,11 @@ process_dir() {
   # don't process if IGNORE file present
   if [ -e "IGNORE" ]; then printf "Ignore: $path\n"; exit; fi
 
-  for template in "$(ls *.t 2>/dev/null)"; do
-    if [[ "$?" -eq 0 ]]; then
-      process_template "$template" "$(dropext $template).md"
-    fi
-  done
+  local templates=$(ls *.t 2>/dev/null)
+  while IFS= read -r template; do
+    echo "process_template: $template $(dropext $template).md"
+    process_template "$template" "$(dropext $template).md"
+  done <<< "$templates"
 
   cd - 1>/dev/null
 }
@@ -136,8 +136,8 @@ process_dirs() {
     process_dir "$path"
   else
     local dirs="$(find $path -type d)"
-    while IFS= read -r line; do
-      process_dir "$line"
+    while IFS= read -r dir; do
+      process_dir "$dir"
     done <<< "$dirs"
   fi
 }
