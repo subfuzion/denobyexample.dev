@@ -28,7 +28,10 @@ Deno is a simple, modern and secure runtime for JavaScript and TypeScript.
 - Has a set of reviewed (audited) standard modules that are guaranteed to work
   with Deno: [deno.land/std](https://deno.land/std)
 
-{{% pageinfo %}} **Deno by Example** focuses on TypeScript.
+<!-- markdownlint-disable --> 
+{{% pageinfo %}}
+
+**Deno by Example** focuses on TypeScript.
 
 Deno innovates in a number of ways, and one of these is by providing first class
 "batteries-included" support for TypeScript.
@@ -39,3 +42,4 @@ benefit from early exposure to strong typing, so all of the examples here are
 written with this in mind.
 
 {{% /pageinfo %}}
+<!-- markdownlint-restore -->
