@@ -39,15 +39,19 @@ true boolean
 4 number
 ```
 
-{{% alert title="Note" %}} **Always** use `let` to declare a variable **unless**
-you know the value is constant, which we'll discuss in the next section. {{%
-/alert %}}
+{{% alert title="Note" %}}
+**Always** use `let` to declare a variable **unless** you know the value is
+constant, which we'll discuss in the next section.
+{{% /alert %}}
 
-{{< alert color="warning" title="Warning: let vs. var" >}} Although TypeScript
-allows using `var` to declare variables, **don't use it** -- always use `let` or
-`const` instead.
+{{< alert color="warning" title="Warning: let vs. var" >}}
+Although TypeScript allows using `var` to declare variables, **don't use it** --
+always use `let` or `const` instead.
 
 `var` is available to support legacy behavior from older JavaScript, but it's
 use is problematic in modern TypeScript. Read the
-[Handbook](https://www.typescriptlang.org/docs/handbook/variable-declarations.html)
-to dig deeper. {{< /alert >}}
+[Handbook] to dig deeper.
+{{< /alert >}}
+
+[Handbook]
+https://www.typescriptlang.org/docs/handbook/variable-declarations.html

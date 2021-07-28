@@ -7,6 +7,7 @@ Use `console.log` to print to standard output.
 
 To run a program, use `deno run`.
 
+<!-- markdownlint-disable -->
 {{< tabpane >}}
   {{< tab header="helloworld.ts" lang="js" >}}
 console.log("Hello, World!");
@@ -18,9 +19,11 @@ deno run helloworld.ts
 Hello, World!
   {{< /tab >}}
 {{< /tabpane >}}
+<!-- markdownlint-restore -->
 
 To build an executable binary of your program, use `deno compile`.
 
+<!-- markdownlint-disable -->
 {{< tabpane >}}
   {{< tab header="Command" lang="text" >}}
 deno compile
@@ -37,3 +40,4 @@ $ ./helloworld
 Hello, World!
   {{< /tab >}}
 {{< /tabpane >}}
+<!-- markdownlint-restore -->

@@ -13,13 +13,15 @@
 # See rules descriptions here:
 # https://github.com/DavidAnson/markdownlint/blob/main/doc/Rules.md
 #
-line_length:              # MD013 max line length
-  stern: true             # allows for lines with no spaces (long URLs), otherwise error
-  tables: false           # don't break tables
-  code_blocks: false      # don't break on code blocks
-  line_length: 80
-html:                     # MD033 no html
-  allowed_elements: [br]
-no-bare-urls: false       # MD034
-headings: true            # MD041 require heading at top of file
-images: false             # MD045: image alt text
+frontMatter: (^---\s*$[^]*?^---\s*$)(\r\n|\r|\n|$)
+line_length:                 # MD013 max line length
+  line_length: 80            # next ine (stern) allows long URLs
+  stern: true                # allows for lines with no spaces (long URLs), otherwise error
+  tables: false              # don't break tables
+  code_blocks: false         # don't break on code blocks
+html:                        # MD033 no html
+  allowed_elements: [br, hr]
+no-bare-urls: false          # MD034 - false because bare-urls are printed in example output
+headings: false              # MD041 - false because H1 provided by title in frontmatter
+images: false                # MD045: image alt text
+no-space-in-emphasis: false  # MD037 - false because space in multiplication expressions

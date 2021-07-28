@@ -8,6 +8,7 @@ weight: 10
 Getting started with Deno is easy. Unlike other languages you might be familiar
 with, Deno only uses a single executable for all of its functionality.
 
+<!-- markdownlint-disable --> 
 {{< tabpane >}}
   {{< tab header="Linux & macOS (shell)" lang="text" >}}
 curl -fsSL https://deno.land/x/install/install.sh | sh
@@ -16,29 +17,33 @@ curl -fsSL https://deno.land/x/install/install.sh | sh
 iwr https://deno.land/x/install/install.ps1 -useb | iex
   {{< /tab >}}
 {{< /tabpane >}}
+<!-- markdownlint-restore -->
 
 For other ways to install or to install different versions, see the
 [deno.land/#installation](https://deno.land/#installation) docs.
 
 Confirm Deno works on your system by running the remote `welcome` module.
 
+<!-- markdownlint-disable --> 
 {{< tabpane >}}
   {{< tab header="Command" lang="text" >}}
 deno run https://deno.land/std/examples/welcome.ts
   {{< /tab >}}
   {{< tab header="Output" lang="text" >}}
-Download https://deno.land/std/examples/welcome.ts Warning
-Implicitly using latest version (0.103.0) for https://deno.land/std/examples/welcome.ts
+Download https://deno.land/std/examples/welcome.ts
+Warning Implicitly using latest version (0.103.0) for https://deno.land/std/examples/welcome.ts
 Download https://deno.land/std@0.103.0/examples/welcome.ts
 Check https://deno.land/std/examples/welcome.ts
 Welcome to Deno!
   {{< /tab >}}
 {{< /tabpane >}}
+<!-- markdownlint-restore -->
 
 Deno lets you know with a warning that you ran a remote module without
 explicitly specifying a version. It defaulted to the latest module version. You
 can specify the version like this:
 
+<!-- markdownlint-disable --> 
 {{< tabpane >}}
   {{< tab header="Command" lang="text" >}}
   deno run
@@ -49,11 +54,13 @@ Check https://deno.land/std@0.103.0/examples/welcome.ts
 Welcome to Deno!
   {{< /tab >}}
 {{< /tabpane >}}
+<!-- markdownlint-restore -->
 
 ## Upgrade Deno
 
 When you want to upgrade Deno on your system, run `deno upgrade`.
 
+<!-- markdownlint-disable --> 
 {{< tabpane >}}
   {{< tab header="Command" lang="text" >}}
 deno upgrade
@@ -67,3 +74,4 @@ inflating: 27.4 MiB / 27.4 MiB (100.0%)
 deno Upgraded successfully
   {{< /tab >}}
 {{< /tabpane >}}
+<!-- markdownlint-restore -->
