@@ -17,6 +17,9 @@ dropext() {
   printf "$1" | sed 's/\.[^.]*$//'
 }
 
+# don't process if IGNORE file present
+if [ -e "IGNORE" ]; then printf "Ignore: $(basename $PWD)\n"; exit; fi
+
 source="$1"
 if [ -z "$source" ]; then die "missing file argument"; fi
 
