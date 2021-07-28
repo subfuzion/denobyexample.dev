@@ -6,6 +6,7 @@
   "scripts": {
     "build": "build.sh",
     "deploy": "deploy.sh",
+    "format": "markdownlint-cli2 content/en && deno fmt content/src",
     "server": "hugo server"
   },
   "repository": {
@@ -20,6 +21,8 @@
   "homepage": "https://denobyexample.dev",
   "devDependencies": {
     "autoprefixer": "^10.3.1",
+    "deno-bin": "^1.11.5",
+    "markdownlint-cli2": "^0.2.0",
     "postcss": "^8.0.0",
     "postcss-cli": "^8.3.1"
   }
