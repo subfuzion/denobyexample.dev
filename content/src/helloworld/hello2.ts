@@ -1,13 +1,3 @@
----
-title: Deno in a Nutshell
-weight: 300
-description: >
-  The very terse guide to Deno for experienced programmers.
----
-
-<!-- markdownlint-disable -->
-{{< tabpane >}}
-  {{< tab header=helloworld.ts lang="text" lang="js" >}}
 // `console.log` automatically converts args to strings.
 console.log(1, "Hello, World!");
 
@@ -24,13 +14,3 @@ console.log(4, `Hello, ${name}!`);
 // variables, inside the braces (`${}`).
 const getName = () => "Deno";
 console.log(5, `Hello, ${getName()}!`);
-  {{< /tab >}}
-  {{< tab header="Output" lang="text" lang="shell" >}}
-1 Hello, World!
-2 Hello, Deno !
-3 Hello, Deno ! You are number 1 !
-4 Hello, Deno!
-5 Hello, Deno!
-  {{< /tab >}}
-{{< /tabpane >}}
-<!-- markdownlint-restore -->

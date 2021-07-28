@@ -7,10 +7,10 @@ description: >
 
 First one!
 
-!helloworld.ts
+@hello1.ts
 
 And another one!
 
-!helloworld.ts
+@hello1.ts
 
 It worked!
