@@ -3,11 +3,11 @@ title: Using the REPL
 weight: 20
 ---
 
-The Deno REPL (read/evaluate/print/loop) is a dedicated Deno command shell that
+The Deno REPL (Read Eval Print Loop) is a dedicated Deno command shell that
 can help you to experiment and learn without having to save and run program
 files.
 
-You can enter `deno repl` or simply `deno` in your terminal. Exit the REPL by
+You can enter `deno repl` or simply `deno` in your terminal. Exit the shell by
 entering `close()` or pressing `Ctrl-D` to terminate the session.
 
 Here's an example of a session.
