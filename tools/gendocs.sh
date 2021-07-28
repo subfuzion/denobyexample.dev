@@ -1,8 +1,10 @@
 #!/usr/bin/env bash
+# Dependencies: sed
+# Usage: builddocs.sh PATH [-r]
 
 die() {
   printf "Error: $@\n"
-  printf "Usage: $(basename $0) TEMPLATE\n"
+  printf "Usage: $(basename $0) PATH [-r]\n"
   exit 1
 }
 
@@ -14,6 +16,10 @@ basename() {
 # returns name without an extension (must already be a basename)
 dropext() {
   printf "$1" | sed 's/\.[^.]*$//'
+}
+
+strip_trailing_slashes() {
+  printf "$1" | sed 's/[/]*$//'
 }
 
 lint() {
@@ -100,20 +106,60 @@ process_template() {
       echo "$line" >> "$target"
     fi
   done < "$template"
+  echo "$target"
+}
+
+process_dir() {
+  local path="$1"
+  local recurs="$2"
+
+  cd "$path"
+
+  # don't process if IGNORE file present
+  if [ -e "IGNORE" ]; then printf "Ignore: $path\n"; exit; fi
+
+  for template in $(ls *.t); do
+    echo "template: $template"
+    process_template "$template" "$(dropext $template).md"
+  done
+
+  cd - 1>/dev/null
+}
+
+process_dirs() {
+  local path="$1"
+  local recurs="$2"
+
+  if [[ "$recurs" -eq 0 ]]; then
+    process_dir "$path"
+  else
+    local dirs="$(find $path -type d)"
+    while IFS= read -r line; do
+      process_dir "$line"
+    done <<< "$dirs"
+  fi
 }
 
 main() {
-  # don't process if IGNORE file present
-  if [ -e "IGNORE" ]; then printf "Ignore: $(basename $PWD)\n"; exit; fi
+  path=""
+  recurs=0
 
-  local template="$1"
-  if [ -z "$template" ]; then die "missing file argument"; fi
+  if [[ "$#" -gt 2 ]]; then die "too many arguments"; fi
+  while (( "$#" )); do
+    case "$1" in
+      "-r")
+        recurs=1
+        ;;
+      *)
+        if [[ ! -z $path ]]; then die "too many arguments"; fi
+        path="$1"
+        ;;
+    esac
+    shift
+  done
 
-  local base="$(check_template_base $template)"
-  if [ "$?" -gt 0 ]; then die "$base"; fi
-
-  # now that the template has been verified
-  process_template "${base}.t" "${base}.md"
+  path="$(strip_trailing_slashes ${path:-.})"
+  process_dirs "$path" "$recurs"
 }
 
 main "$@"

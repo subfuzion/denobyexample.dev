@@ -4,8 +4,7 @@
   "description": "",
   "main": "none.js",
   "scripts": {
-    "build": "build.sh",
-    "deploy": "deploy.sh",
+    "build": "tools/gendocs.sh -r content/en",
     "format": "markdownlint-cli2 content/en && deno fmt content/src",
     "server": "hugo server"
   },
