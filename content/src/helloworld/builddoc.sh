@@ -43,13 +43,9 @@ embed() {
   local source="$2"
   local out="$3"
 
-  local source="$1"
-  local target_sh="$2"
-  local target_md="$3"
-
   write "$target" '<!-- markdownlint-disable -->'
   write "$target" '{{< tabpane >}}'
-  write "$targetd" '  {{< tab header='"$source"' lang="text" lang="js" >}}'
+  write "$target" '  {{< tab header='"$source"' lang="text" lang="js" >}}'
 
   cat "$source" >> "$target"
 
@@ -61,20 +57,6 @@ embed() {
   write "$target" '  {{< /tab >}}'
   write "$target" '{{< /tabpane >}}'
   write "$target" '<!-- markdownlint-restore -->'
-}
-
-# generate markdown
-gen() {
-  local source="$1"
-  local target_sh="${2}.sh"
-  local target_md="${2}.md"
-  local template="${2}.t"
-
-  if ! [ -e "$template" ]; then die "missing template: $template"; fi
-  cat "$template" > "$target_md"
-  write "$target_md" "\n"
-
-  embed "$source" "$target_sh" "$target_md"
 }
 
 # verify name looks like a template file
@@ -95,9 +77,8 @@ check_template_base() {
 }
 
 process_source() {
-  local base="$1"
-  local target="$2"
-  local source="$3"
+  local target="$1"
+  local source="$2"
   local out="$(dropext $source).sh"
 
   lint "$source"
@@ -106,16 +87,15 @@ process_source() {
 }
 
 process_template() {
-  local base="$1"
-  local template="${base}.t"
-  local target="${base}.md"
+  local template="$1"
+  local target="$2"
 
   printf "" > "$target"
 
   while IFS= read -r line
   do
     if grep -q "^@" <<< "$line"; then
-      process_source "$base" "$target" "${line:1}"
+      process_source "$target" "${line:1}"
     else
       echo "$line" >> "$target"
     fi
@@ -132,14 +112,8 @@ main() {
   local base="$(check_template_base $template)"
   if [ "$?" -gt 0 ]; then die "$base"; fi
 
-  # now that the template has been verified, we pass
-  # base for everything and let functions resolve extension
-
-  process_template "$base"
-
-#  lint "$source"
-#  run  "$source" "$target"
-#  gen  "$source" "$target"
+  # now that the template has been verified
+  process_template "${base}.t" "${base}.md"
 }
 
 main "$@"
