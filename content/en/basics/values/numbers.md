@@ -1,5 +1,6 @@
 ---
 title: A bit more about numbers
+linkTitle: More about numbers
 weight: 1
 ---
 

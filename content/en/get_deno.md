@@ -46,8 +46,7 @@ can specify the version like this:
 <!-- markdownlint-disable --> 
 {{< tabpane >}}
   {{< tab header="Command" lang="text" >}}
-  deno run
-https://deno.land/std@0.103.0/examples/welcome.ts
+deno run https://deno.land/std@0.103.0/examples/welcome.ts
   {{< /tab >}}
   {{< tab header="Output" lang="text" >}}
 Check https://deno.land/std@0.103.0/examples/welcome.ts
