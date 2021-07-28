@@ -39,6 +39,7 @@ true boolean
 4 number
 ```
 
+<!-- markdownlint-disable --> 
 {{% alert title="Note" %}}
 **Always** use `let` to declare a variable **unless** you know the value is
 constant, which we'll discuss in the next section.
@@ -50,8 +51,7 @@ always use `let` or `const` instead.
 
 `var` is available to support legacy behavior from older JavaScript, but it's
 use is problematic in modern TypeScript. Read the
-[Handbook] to dig deeper.
+[Handbook](https://www.typescriptlang.org/docs/handbook/variable-declarations.html)
+to dig deeper.
 {{< /alert >}}
-
-[Handbook]
-https://www.typescriptlang.org/docs/handbook/variable-declarations.html
+<!-- markdownlint-restore --> 

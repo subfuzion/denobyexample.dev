@@ -46,6 +46,7 @@ There are two things to note about the output:
   inheritance chain. This normally what you want (and this is different from
   iterating over the prototype chain when using classic JavaScript object-based
   inheritance, which might or might not be what you want).
+
 - Because TypeScript is strongly typed, you have to cast each element of the
   enumeration to an [indexed access type] using `keyof` for the type.
 
@@ -66,8 +67,8 @@ foo = base-value
 bar = derived-value
 ```
 
-If you just want to iterate over an object's keys or over its values, you can
-also just use `Object.keys()` or `Object.values()`, respectively, instead of
+If you want to iterate only over an object's keys or its values, you can use
+`Object.keys()` or `Object.values()`, respectively, instead of
 `Object.entries()`.
 
 [indexed access type]:

@@ -5,7 +5,7 @@ weight: 1
 
 ## Classic for loop
 
-All three "initialization/test/update" parts are used.
+All three "initialization/test/update" parts used.
 
 ```js
 for (let j = 4; j < 10; j++) {
@@ -24,7 +24,8 @@ for (let j = 4; j < 10; j++) {
 
 ## Basic for loop
 
-This loop has a single test condition, and no initialization or update parts.
+No initialization or update parts; only the test condition in the middle part
+(between the two semi-colons (`;`)).
 
 ```js
 let i = 1;
@@ -41,11 +42,11 @@ $ deno run for.ts
 3
 ```
 
-## Spinning for loop with break or return
+## For loop that only exits with break or return
 
-This for loop will continuously loop unless it reaches a `break` or `return`
-statement, usually based on some condition that's easier to express in the loop
-body.
+This for loop will continuously "spin" unless it reaches a `break` or `return`
+statement, usually based on some condition to wait on that's easier to specify
+in the loop body. Shown for completeness, but avoid doing this in normal code.
 
 ```js
 for (;;) {
