@@ -106,7 +106,7 @@ process_template() {
       echo "$line" >> "$target"
     fi
   done < "$template"
-  echo "$target"
+  echo "- $template >> $target"
 }
 
 process_dir() {
@@ -114,13 +114,15 @@ process_dir() {
   local recurs="$2"
 
   cd "$path"
+  echo "$path"
 
   # don't process if IGNORE file present
   if [ -e "IGNORE" ]; then printf "Ignore: $path\n"; exit; fi
 
-  for template in $(ls *.t); do
-    echo "template: $template"
-    process_template "$template" "$(dropext $template).md"
+  for template in "$(ls *.t 2>/dev/null)"; do
+    if [[ "$?" -eq 0 ]]; then
+      process_template "$template" "$(dropext $template).md"
+    fi
   done
 
   cd - 1>/dev/null
