@@ -38,14 +38,22 @@ function write() {
 
 # generate markdown
 f="${target}.md"
-printf "" > "$f"
+
+if ! [ -e "frontmatter.md" ]; then die "missing frontmatter.md"; fi
+cat frontmatter.md > "$f"
+write "$f" "\n"
+
 write "$f" '<!-- markdownlint-disable -->'
 write "$f" '{{< tabpane >}}'
 write "$f" '  {{< tab header='"$source"' lang="text" lang="js" >}}'
+
 cat "$source" >> "$f"
+
 write "$f" '  {{< /tab >}}'
 write "$f" '  {{< tab header="Output" lang="text" lang="shell" >}}'
+
 cat "${target}.sh" >> "$f"
+
 write "$f" '  {{< /tab >}}'
 write "$f" '{{< /tabpane >}}'
 write "$f" '<!-- markdownlint-restore -->'
