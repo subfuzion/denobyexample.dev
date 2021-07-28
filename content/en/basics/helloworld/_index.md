@@ -5,31 +5,35 @@ weight: 10
 
 Use `console.log` to print to standard output.
 
-```js
+To run a program, use `deno run`.
+
+{{< tabpane >}}
+  {{< tab header="helloworld.ts" lang="js" >}}
 console.log("Hello, World!");
-```
-
-To run the program, put the code in `helloworld.ts` and use `deno run`.
-
-```text
-$ deno run helloworld.ts
-Check ...helloworld.ts
+  {{< /tab >}}
+  {{< tab header="Command" lang="text" >}}
+deno run helloworld.ts
+  {{< /tab >}}
+  {{< tab header="Output" lang="text" >}}
 Hello, World!
-```
+  {{< /tab >}}
+{{< /tabpane >}}
 
-To build a binary, use `deno compile`.
+To build an executable binary of your program, use `deno compile`.
 
-```text
-$ deno compile helloworld.ts
+{{< tabpane >}}
+  {{< tab header="Command" lang="text" >}}
+deno compile
+helloworld.ts
+  {{< /tab >}}
+  {{< tab header="Output" lang="text" >}}
 Check ...helloworld.ts
 Bundle ...helloworld.ts
 Compile ...helloworld.ts
 Emit helloworld
-```
-
-You can now execute the binary directly.
-
-```text
+  {{< /tab >}}
+  {{< tab header="Run" lang="text" >}}
 $ ./helloworld
 Hello, World!
-```
+  {{< /tab >}}
+{{< /tabpane >}}

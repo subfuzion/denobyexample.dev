@@ -44,8 +44,8 @@ The following example demonstrates this with an arrow function. Arrow functions
 will be discussed later. For now, just understand that calling `getName()` will
 return the string, "Deno".
 
-Here we invoke `getName()` in the template literal below,
-so the returned string will be passed as an argument to`console.log()`.
+Here we invoke `getName()` in the template literal below, so the returned string
+will be passed as an argument to`console.log()`.
 
 ```js
 const getName = () => "Deno";
