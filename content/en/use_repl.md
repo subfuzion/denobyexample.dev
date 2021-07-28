@@ -1,6 +1,6 @@
 ---
-title: Using the REPL
-weight: 20
+title: Deno shell (REPL)
+weight: 200
 ---
 
 The Deno REPL (Read Eval Print Loop) is a dedicated Deno command shell that
@@ -31,3 +31,8 @@ undefined
 ```
 
 The shell always prints out the value of the expression you enter.
+
+In the last case (before the final prompt), evaluating the expression
+`console.log("Hello")` causes `Hello` to be printed as a side effect; since the
+expression itself doesn't return any value, however, the shell prints
+`undefined`.

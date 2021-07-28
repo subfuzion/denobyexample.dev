@@ -1,6 +1,6 @@
 ---
 title: Constants
-weight: 40
+weight: 300
 ---
 
 You can use `const` anywhere you can use `let` to declare a variable. You use it

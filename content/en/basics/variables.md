@@ -1,6 +1,6 @@
 ---
 title: "Variables"
-weight: 30
+weight: 40
 ---
 
 Variables are explicitly declared and used by the compiler to check that they

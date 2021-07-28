@@ -1,6 +1,6 @@
 ---
 title: A bit more about numbers
-weight: 21
+weight: 1
 ---
 
 TypeScript does not have separate types for `integer` and `float` values, only

@@ -1,6 +1,6 @@
 ---
 title: Get Deno
-weight: 10
+weight: 100
 ---
 
 ## Get Deno

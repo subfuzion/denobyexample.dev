@@ -1,6 +1,6 @@
 ---
 title: The Basics
-weight: 200
+weight: 300
 description: >
   Essential TypeScript to get you up and running quickly with Deno.
 ---

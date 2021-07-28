@@ -1,6 +1,6 @@
 ---
 title: For loop
-weight: 60
+weight: 1
 ---
 
 ## Classic for loop

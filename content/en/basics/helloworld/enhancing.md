@@ -1,6 +1,6 @@
 ---
 title: Customizing output
-weight: 11
+weight: 1
 ---
 
 ## console.log arguments

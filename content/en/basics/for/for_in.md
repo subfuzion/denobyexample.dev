@@ -1,6 +1,6 @@
 ---
 title: For..in loop
-weight: 80
+weight: 3
 ---
 
 The for..in loop is used to iterate over an object's properties. Its classic
