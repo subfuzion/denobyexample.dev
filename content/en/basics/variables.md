@@ -50,8 +50,8 @@ Although TypeScript allows using `var` to declare variables, **don't use it** --
 always use `let` or `const` instead.
 
 `var` is available to support legacy behavior from older JavaScript, but it's
-use is problematic in modern TypeScript. Read the
+use is problematic in modern TypeScript. See the
 [Handbook](https://www.typescriptlang.org/docs/handbook/variable-declarations.html)
 to dig deeper.
 {{< /alert >}}
-<!-- markdownlint-restore --> 
+<!-- markdownlint-restore -->

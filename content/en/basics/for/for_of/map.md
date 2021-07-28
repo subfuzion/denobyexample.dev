@@ -5,7 +5,12 @@ weight: 4
 ---
 
 ```js
-const map = new Map([["a", 1], ["b", 2], ["c", 3]]);
+const map = new Map([
+  ["a", 1],
+  ["b", 2],
+  ["c", 3],
+]);
+
 ```
 
 Iterate over map entries as key,value tuples.

@@ -15,7 +15,7 @@ console.log(`sum: ${sum}`);
 sum = 0;
 // Use `const n` because each iteration gets a new `n`.
 for (const n of nums) {
-    sum += n;
+  sum += n;
 }
 console.log(`sum: ${sum}`);
 // sum: 9
@@ -24,7 +24,7 @@ console.log(`sum: ${sum}`);
 const str = "hello";
 
 for (const s of str) {
-    console.log(s.toUpperCase());
+  console.log(s.toUpperCase());
 }
 // H
 // E
@@ -43,7 +43,11 @@ for (const val of set) {
 
 // Map iteration
 
-const map = new Map([["a", 1], ["b", 2], ["c", 3]]);
+const map = new Map([
+  ["a", 1],
+  ["b", 2],
+  ["c", 3],
+]);
 
 for (const entry of map) {
   console.log(entry);
