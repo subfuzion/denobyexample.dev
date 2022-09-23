@@ -20,7 +20,7 @@
   "homepage": "https://denobyexample.dev",
   "devDependencies": {
     "autoprefixer": "^10.4.8",
-    "deno-bin": "^1.21.3",
+    "deno-bin": "^1.25.4",
     "markdownlint-cli2": "^0.4.0",
     "postcss": "^8.4.13",
     "postcss-cli": "^10.0.0"
