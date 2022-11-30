@@ -23,6 +23,6 @@
     "deno-bin": "^1.21.3",
     "markdownlint-cli2": "^0.4.0",
     "postcss": "^8.4.13",
-    "postcss-cli": "^10.0.0"
+    "postcss-cli": "^10.1.0"
   }
 }
